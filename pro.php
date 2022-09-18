@@ -17,11 +17,8 @@ if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
 
-
-
 $sql = "SELECT id, username, email, img FROM users";
 $result = $db->query($sql);
-
 
 if ($result->num_rows > 0) {
     // output data of each row
@@ -33,8 +30,6 @@ if ($result->num_rows > 0) {
 } else {
     print "0 results";
 }
-
-
 
 $db->close();   
         ?> 
